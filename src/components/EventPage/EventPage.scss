@@ -1,0 +1,35 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.event-page {
+  &__wrapper {
+    
+  }
+
+  &__image {
+    width: 375px;
+    height: 375px;
+  }
+
+  &__content {
+    margin: 11px 20px;
+  }
+
+  &__title {
+    @include fontParameters(28px, 32px, 700);
+
+    color: $c-purpleDark;
+  }
+
+  &__host {
+    margin-top: 4px;
+
+    @include fontParameters(14px, 16px);
+
+    color: $c-grey;
+
+    &-name {
+      font-weight: 700;
+    }
+  }
+}

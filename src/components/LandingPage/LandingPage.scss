@@ -1,0 +1,160 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.landing-page {
+  height: 100%;
+
+  padding: 28px $padding-mobile 14px;
+
+  @include tablet {
+    padding: 60px $padding-tablet 26px;
+  }
+
+  @include desktop {
+    padding: 100px $padding-desktop 106px;
+  }
+
+  &__wrapper {
+    @include limitContentWidth;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop {
+      flex-direction: row;
+      gap: 168px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+      align-items: flex-end;
+    }
+  }
+
+  &__text {
+    @include fontParameters(16px, 18px);
+
+    text-align: center;
+
+    @include tablet {
+      @include fontParameters(24px, 28px);
+    }
+
+    @include desktop{
+      text-align: right;
+    }
+  }
+
+  &__title {
+    @include fontParameters(36px, 100%, 700);
+
+    color: $c-purpleDark;
+
+    &-special {
+      background-clip: border-box;
+      background: -webkit-linear-gradient($c-purpleLight, $c-pink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @include tablet {
+      margin: 0 153px;
+      height: 192px;
+
+      @include fontParameters(64px, 100%, 700);
+    }
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__description {
+    margin-top: 16px;
+
+    font-weight: 300;
+
+    color: $c-greyDark;
+
+    @include tablet {
+      margin: 0 179.5px;
+    }
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    margin-top: 36px;
+    width: 166px;
+    height: 292px;
+
+    border-radius: 13px;
+
+    filter: drop-shadow(0px 0px 17.6435px rgba(0, 0, 0, 0.05));
+
+    @include tablet {
+      margin-top: 55px;
+      width: 311px;
+      height: 548px;
+
+      border-radius: 25px;
+    }
+
+    @include desktop {
+      display: none;
+    }
+
+    &--desktop {
+      display: none;
+
+      @include desktop {
+        display: unset;
+
+        width: 440px;
+        height: 776px;
+  
+        border-radius: 35px;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 34px;
+    padding: 16px 21px;
+    width: 187px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    @include fontParameters(16px, 18px, 700);
+
+    color: #fff;
+    background: linear-gradient(90deg, $c-purpleLight, $c-pink);
+
+    text-decoration: none;
+
+    @include tablet {
+      margin-top: 69px;
+      width: 320px;
+      height: 55px;
+      padding: 16px 70px;
+    }
+
+    @include desktop {
+      margin-top: 52px;
+    }
+  }
+}
