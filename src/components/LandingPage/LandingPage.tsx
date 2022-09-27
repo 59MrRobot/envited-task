@@ -42,5 +42,5 @@ export const LandingPage: React.FC = React.memo(
         </div>
       </div>
     </div>
-  );
+  ),
 )

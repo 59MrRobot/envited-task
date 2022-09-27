@@ -72,5 +72,5 @@ export const EventPage: React.FC = React.memo(
         />
       </div>
     </div>
-  );
+  ),
 )
