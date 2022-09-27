@@ -19,6 +19,7 @@
     @include desktop {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-start;
     }
   }
 
@@ -57,6 +58,10 @@
 
     @include tablet {
       margin: 36px 0 0;
+    }
+
+    @include tablet {
+      margin: 0;
     }
   }
 
