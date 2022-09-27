@@ -5,8 +5,8 @@ import { BsCalendar2DateFill } from 'react-icons/bs';
 import { MdArrowForwardIos } from 'react-icons/md';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 
-export const EventPage: React.FC = () => {
-  return (
+export const EventPage: React.FC = React.memo(
+  () => (
     <div className="event-page">
       <div className="event-page__wrapper">
         <img 
@@ -73,4 +73,4 @@ export const EventPage: React.FC = () => {
       </div>
     </div>
   );
-}
+)

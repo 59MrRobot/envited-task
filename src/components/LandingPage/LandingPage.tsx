@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.scss';
 
-export const LandingPage: React.FC = () => {
-  return (
+import { TbConfetti } from 'react-icons/tb';
+
+export const LandingPage: React.FC = React.memo(
+  () => (
     <div className="landing-page">
       <div className="landing-page__wrapper">
         <img
@@ -35,10 +37,10 @@ export const LandingPage: React.FC = () => {
             to="/event"
             className="landing-page__button"
           >
-            Create my event
+            <TbConfetti /> Create my event
           </Link>
         </div>
       </div>
     </div>
   );
-}
+)

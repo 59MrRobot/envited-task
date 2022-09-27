@@ -23,8 +23,18 @@
   }
 
   &__image {
-    width: 375px;
-    height: 375px;
+    width: 100%;
+
+    .square:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    @include tablet {
+      width: 593px;
+      height: 593px;
+    }
 
     @include desktop {
       display: none;
@@ -32,6 +42,9 @@
 
     &--desktop {
       display: none;
+
+      width: 500px;
+      height: 500px;
 
       @include desktop {
         display: unset;
